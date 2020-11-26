@@ -105,7 +105,7 @@ for ti in range(2):
                         dux = (density[ai][aj]*dx*dy*dz*((numpy.dot(ju_1,ju_2))/density[bi][bj]**2+numpy.dot(ju_3,ju_2)/density[ai][aj]**2))
                         duy = (density[ai][aj]*dx*dy*dz*((numpy.dot(ju_4,ju_2))/density[bi][bj]**2+numpy.dot(ju_5,ju_2)/density[ai][aj]**2))
                         de+=0.5*(numpy.dot(ju_6,[dux,duy]))
-            e[bi][bj]+=de/10**6
+            e[bi][bj]+=de*dt/10**6
         print("进行了"+str(bi)+"行")
 
     #位置的变化
